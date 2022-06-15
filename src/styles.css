@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+.small-flag {
+    width: 50px;
+    border: aliceblue;
+    border-style: outset;
+    border-width: 0.5px;
+}
+
+.mr-1 {
+  margin-right: 5px;
+  min-width: 250px;
+}
+
+.animate__animated.animate__fadeInUpBig {
+  --animate-duration: 1750ms;
+}
+
+.a-no-href:hover {
+  cursor: pointer;
+}

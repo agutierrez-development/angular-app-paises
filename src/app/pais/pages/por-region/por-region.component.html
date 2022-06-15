@@ -1,0 +1,27 @@
+<h3>
+  Buscar por región
+  <small> {{ regionActiva | titlecase }}</small>
+</h3>
+<hr>
+
+<h5>Selecciones la región</h5>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item"
+          *ngFor="let region of regiones">
+          <a [class]="getClaseCSS(region)"
+             (click)="activarRegion(region)"|
+             >
+             {{ region | titlecase }}
+          </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div *ngIf="paises.length > 0" class="row">
+  <div class="col">
+      <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  </div>
+</div>
